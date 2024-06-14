@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Velocidade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #resultado {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Verificar</h1>
+    <p>Digite a velocidade atual (em km/h): <input type="text" id="velocidade"></p>
+    <button onclick="verificar()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificar() {
+            var velocidade = parseInt(document.getElementById("velocidade").value);
+            var resultadoElement = document.getElementById("resultado");
+
+            if (velocidade <= 60) {
+                resultado.innerHTML = `velocidade =  ${velocidade}km/h Prossiga!`;
+                resultado.style.color = "green";
+            } if(velocidade < 60 ){
+                resultado.innerHTML = `velocidade permitida`;
+                resultado.style.color = "green";
+            }if(velocidade == 80){
+                resultado.innerHTML = `reduza a velocidade!`;
+                resultado.style.color = "yellow";
+            }if(velocidade >= 84){
+                resultado.innerHTML = `Você foi multado!!!!`;
+                resultado.style.color = "red"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
